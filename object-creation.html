@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            js objects demo
+        </title>
+    </head>
+    <body>
+        <script>
+            // Object creation using object literal
+            // 1. using object literal syntax
+            // let user = {}
+            // user.name="test"
+            // user.age = 70
+
+            // user.sayHi =function(){
+            //     console.log("saying hiii")
+            // }
+            // console.log(user)
+            // to access the property 
+
+            // console.log(user.name)
+            // console.log(user.age)
+            // console.log(user["name"])
+            // console.log(user["age"])
+
+            // user.sayHi()
+
+           // 2. using constructor function
+
+           let emp = new Object()
+           console.log(emp)
+           emp["companyName"] = "epam"
+           emp.address = "hyd"
+
+           console.log(emp)
+
+
+           //3. using our own  constructor function
+           function Teacher(name,age){
+            this.name = name;
+            this.age = age
+            this.getAge = function(){
+                console.log("calculating age")
+            }
+           }
+
+           let t1 = new Teacher("test1",30)
+
+           let t2 = new Teacher("test2",50)
+
+           console.log(t1)
+           console.log(t2)
+
+           // 4. using class object 
+
+           class Company{
+            constructor(name,address){
+                this.name=name;
+                this.address = address
+            }
+
+            sayHi(){
+                console.log("saying hiiii")
+            }
+           }
+           let c1 = new Company("epam","hyd")
+           console.log(c1)
+           c1.sayHi();
+
+           // 5. using Object.create method 
+
+
+           let user = {
+            name:"test1",
+            age:30
+           }
+           let copiedUser = Object.create(user)
+           copiedUser.address = "hyd"
+           console.log(copiedUser)
+
+           // 2nd syntax 
+
+           let user1 = {
+            name:"test1",
+            age:20,
+           }
+
+           let user2Properties = {
+            address:{
+                value:"hyd"
+            },
+            email:{
+                value:"test2@gmail"
+            }
+           }
+
+           let user2 = Object.create(user,user2Properties)
+
+           console.log(user)
+
+           console.log(user2)
+
+           //
+        </script>
+    </body>
+</html>

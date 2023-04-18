@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        object creation part2
+    </title>
+</head>
+
+<body>
+    <script>
+        // let obj = {
+        //     x:20
+        // }
+
+        // console.log(obj);
+        // console.log(Object.getOwnPropertyDescriptors(obj))
+
+
+        // for(var key in obj){
+        //     console.log(key)
+        // }
+
+        // obj.x =1000
+        // console.log(obj.x)
+
+        // let objCopy = Object.create(obj,{y:{value:100,enumerable:true,configurable:true,writable:true}})
+
+        // console.log(objCopy)
+        // console.log(Object.getOwnPropertyDescriptors(objCopy))
+
+        // objCopy.y=9000
+        // console.log(objCopy.y)
+
+        // for(var key in objCopy){
+        //     console.log(key)
+        // }
+
+
+        // function Cat() {
+        //     this.color = "white"
+        // }
+        // let cat1 = Cat();
+        // console.log(cat1);
+        // console.log(window.color);
+
+        // function Cat(name, color) {
+        //     this.name = name
+        //     this.color = color
+        // }
+        // let cat1 = new Cat("Fluppy", "white");
+        // console.log(Object.getOwnPropertyDescriptors(cat1))
+
+        // cat1.name="new name"
+        // cat1.color="black"
+
+        // console.log(cat1)
+
+        // for(var key in cat1){
+        //     console.log(key)
+        // }
+
+        // delete cat1.name
+
+
+        // console.log(cat1)
+
+        // let task = {};
+        // Object.defineProperty(task, "action", {
+        //     value: "doIt",
+        //     writable:true
+        // });
+        // console.log(task.action);
+        // console.log(Object.getOwnPropertyDescriptors(task))
+        // task.action="doIt new"
+        // console.log(task.action)
+
+
+        // let task = {};
+        // Object.defineProperty(task, "action", {
+        //     value: "doIt",
+        //     enumerable:true
+        // });
+        //  console.log(Object.getOwnPropertyDescriptors(task))
+        // for (let field in task)
+        //     console.log(field);
+
+
+        let task = {};
+        Object.defineProperty(task, "action", {
+            value: "doIt",
+            configurable:true
+        });
+         console.log(Object.getOwnPropertyDescriptors(task))
+
+        Object.defineProperty(task, "action", {
+            value: "done"
+        });
+        console.log(task.action);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

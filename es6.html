@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            es6 demo
+        </title>
+    </head>
+    <body>
+        <script>
+            //1. let and const 
+
+            // var a = 10;
+            // console.log(a)
+            // {
+            //     const a  =20;
+            //     console.log(a)
+            // }
+
+            // console.log(a)
+
+            // var x = 20;
+            // console.log(x);//20
+            // {
+            //     let x = 30;
+            //     console.log(x);//30
+            // }
+            // var x =40
+            // console.log(x)
+            // const a = 30;
+            // const a =50;
+
+            //2. // Arrow function 
+
+            // function sum(a,b){
+            //     console.log(a+b)
+            // }
+
+            // sum(30,40)
+
+            // const sum=(a,b)=>{
+            //     console.log(a+b)
+            // }
+            // sum(50,30)
+
+            // const sum2=(a,b)=>a+b
+
+            // console.log(sum2(30,40))
+            // let user = {
+            //     name:"sameer",
+            //     show:function(){
+            //         console.log(this.name)
+            //     },
+            //     show2:()=>{
+            //         console.log(this)
+            //     }
+            // }
+
+            // user.show();
+            // user.show2();
+
+
+            // function User(name,age){
+            //     this.name=name
+            //     this.age=age
+            // }
+
+            // let u1 = new User("sameer",20)
+
+            //3.// class object
+
+            // class User{
+            //     constructor(name,age){
+            //         this.name=name;
+            //         this.age=age
+            //     }
+            //     show(){
+            //         console.log("detail=",this.name,this.age)
+            //     }
+            // }
+
+            // let u1 = new User("sameer",20)
+            // let u2 = new User("sameer2",22)
+
+            // class Employee{
+            //     constructor(name,address){
+            //         this.empname=name
+            //         this.address=address
+            //     }
+            // }
+
+            // let e1 = new Employee("test1",30)
+            // console.log(e1)
+
+
+
+            //4,5 spread rest
+
+            // let group1 = [20,30,40]
+            // let group2 = [70,40,30]
+
+            // let mixGroup = [...group1,...group2];// [20,30,40,70,40,30]
+
+            // console.log(mixGroup)
+
+            // let user1 = {
+            //     name:"sameer",
+            //     age:20
+            // }
+            // let user2 = {...user1}
+            // console.log(user2)
+
+
+           // 5. Rest (...)
+
+        //    function add(a,b,c,d,e,f){
+        //     console.log(a,b,c,d,e,f)
+        //    }
+
+        //    add(20,30,40,50,60,70)
+
+        // function sum(){
+        //    console.log(arguments.length)
+        // }
+
+        // sum(10,20,30,40,40,50,30)
+
+        //6. Default parameter
+
+        // function registerStudent(name,age,collegeName="kmit"){
+        //     console.log(name,age,collegeName)
+        // }
+
+        // registerStudent("test1",30,"jntu")
+        // registerStudent("test2",40)
+
+       // 7. Promise
+
+        // function orderItem(){
+        //    setTimeout(function(){
+        //         console.log("oredring item")
+        //    },3000) 
+        // }
+
+        // function payNow(){
+        //     console.log("payment done")
+        // }
+
+        // orderItem();
+        // payNow();
+
+        // using promise ------
+
+        let balance = 5000
+
+        function orderItem(itemprice){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    if(itemprice>balance){
+                        reject("insufficient balance")
+                    }else{
+                    console.log("placing an order")
+                    resolve("order placed successfully")
+                    }
+                   
+                },3000)
+            })
+
+        }
+
+        function payNow(){
+            console.log("payment done")
+        }
+
+        orderItem(7000).then(function(res){
+            console.log(res)
+            payNow();
+        }).catch(function(err){
+            console.log("some went wrong",err)
+        })
+
+        
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

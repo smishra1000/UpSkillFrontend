@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <title>this demo</title>
+    </head>
+    <body>
+        <script>
+            // var a = 10;
+            // console.log(a)
+            // console.log(this.a)
+            // console.log(this===window)
+
+
+            // function sayHi(){
+            //     console.log("hello saying hiiii")
+            // }
+
+            // sayHi();
+            // window.sayHi();
+            // this.sayHi();
+
+            // let user = {
+            //     name:"test1",
+            //     show:function(){
+            //         console.log(this.name)
+            //     }
+            // }
+
+            // console.log(user.name)
+
+            // console.log(user.show())
+            // let employee = {
+            //     firstName:"test1",
+            //     email:"test1@gmail.com",
+            //     showName:function(){
+            //         console.log(this.firstName,this.email)
+            //     }
+            // }
+
+            
+            // employee.showName();
+
+
+            // var a = 10;
+            // function showName(){
+            //     console.log(this,window)
+            //     console.log(this.a)
+            // }
+            // showName()
+
+
+            let user1 = {
+                name:"test1",
+                showName:function(){
+                    console.log("name of user=",this.name)
+                }
+            }
+
+            let user2 = {
+                name:"test2"
+            }
+
+            user1.showName();
+
+            user2.showName();
+        </script>
+
+    </body>
+</html>

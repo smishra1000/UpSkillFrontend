@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        async sync demo
+    </title>
+</head>
+
+<body>
+    <script>
+        // function showCallBackHell(){
+        //     setTimeout(function(){
+        //         console.log("first")
+        //         setTimeout(function(){
+        //             console.log("2nd")
+        //             setTimeout(function(){
+        //             console.log("thirdnd")
+        //         },3000)
+        //         },3000)
+        //     },2000)
+        // }
+
+        // showCallBackHell();
+
+
+        // function orderNow(){
+        //     console.log("ordering now")
+        // }
+
+
+        // orderNow(function(){
+        //     payNow(function(){
+
+        //     })
+        // })
+
+
+        // function orderItem() {
+        //     return new Promise(function (resolve, reject) {
+        //         setTimeout(function () {
+        //             console.log("placing an order")
+        //             reject("some thing went wrong")
+        //         }, 3000)
+        //     })
+
+        // }
+
+
+        // function payNow() {
+        //     console.log("payment done")
+        // }
+
+        // orderItem().then(function(result){
+        //     console.log(result)
+        //     payNow();
+        // }).catch(function(err){
+        //     console.log(err)
+        // })
+
+        //     let role="generaluser"
+
+        // function getUsers(){
+        //     return new Promise(function(resolve,reject){
+        //         setTimeout(function(){
+        //             if(role==="admin"){
+        //                 resolve([{id:1,name:"sameer"}])
+        //             }else {
+        //                 reject("you dont have permission to view users")
+        //             }
+
+        //     },3000)
+        //     })      
+         
+        // }
+
+        // function displayUsers(users){
+        //     console.log("users data=",users)
+        // }
+
+        // getUsers().then(function(res){
+        //     displayUsers(res)
+        // }).catch(function(err){
+        //     console.log(err)
+        // })
+
+        // console.log("hello dont block me")
+
+
+
+
+
+        console.log("first")
+
+
+        setTimeout(function(){
+            console.log("second")
+
+        },3000)
+
+       
+
+
+        console.log("third")
+
+
+
+
+
+    </script>
+</body>
+
+</html>

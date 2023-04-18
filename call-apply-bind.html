@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>call apply bind demo</title>
+    </head>
+    <body>
+        <script>
+         
+            let user1 = {
+                name:"test1",
+                showName:function(msg){
+                    console.log(this.name,msg)
+                }
+            }
+
+            let user2 = {
+                name:"test2"
+            }
+
+            let user3 = {
+                name:"test3"
+            }
+
+            let user4 = {
+                name:"test4"
+            }
+
+            //console.log(user1.showName())
+
+        //    user1.showName.call(user3,"good morning")
+
+        //     user1.showName.apply(user4,["good morning"])
+
+            let bindedFunc = user1.showName.bind(user4)
+            bindedFunc("good morning")
+            
+        </script>
+
+    </body>
+</html>

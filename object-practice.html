@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        practice
+    </title>
+</head>
+
+<body>
+    <script>
+        // let task = {};
+        // task.action = "Create"
+        // task.isDone = true;
+        // task.estHours = 16;
+        // task.hours = [12,34]
+        // task.getTask = function () {
+        //     return true;
+        // }
+        // console.log(task.action);
+        // console.log(task["action"])
+        // console.log(typeof task.toString)
+
+        let user = {
+            name:"test1"
+        }
+
+
+        Object.defineProperty(user,"age",{value:80,enumerable:true})
+        console.log(Object.getOwnPropertyDescriptors(user));
+
+        for(let key in user){
+            console.log(key)
+        }
+
+
+        Object.keys(user)
+
+        
+
+       
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                border:2px solid red
+            }
+            p{
+                border:2px solid green
+            }
+        </style>
+        <title>
+            events demo
+        </title>
+    </head>
+    <body onclick="showBody()">
+        <!-- <button onclick="login()">Login</button>
+        <input type="text" onchange="search(event)" value=""/> -->
+
+        <!-- <form id="form1">
+            <label>Fname:</label>
+            <input type="text" value="" id="fname"/>
+
+            <br/>
+            <label>Lname</label>
+            <input type="text" value="" id="lname"/>
+            <input type="submit" value="save" />
+            <a href="https://google.com" onclick="showgoogle(event)">google.com</a>
+        </form> -->
+
+        <div onclick="showDiv()">
+            <p onclick="showP()">paragrap1</p>
+        </div>
+
+        <ul onclick="list(event)">
+            <li >list1</li>
+            <li >list2</li>
+            <li >list3</li>
+            <li>list4</li>
+        </ul>
+
+        <script>
+
+            function list(event){
+                console.log("liii")
+            }
+
+            function showP(){
+                console.log("showing pppp")
+            }
+
+            function showDiv(){
+                console.log("showing divv")
+            }
+
+            function showBody(){
+                console.log("showing bodyyyy")
+            }
+            // function login(){
+            //     console.log("logged in successfully")
+            // }
+
+            // function search(ev){
+            //     console.log(ev)
+            // }
+            // let form1 = document.getElementById("form1")
+            // form1.addEventListener("submit",saveData)
+           
+            // form1.addEventListener("submit",display)
+            // form1.removeEventListener("submit",display)
+
+            // function saveData(event){
+            //     event.preventDefault()
+            //     console.log(document.getElementById("fname").value)
+            //     console.log(document.getElementById("lname").value)
+            //     console.log(event)
+            // }
+
+            // function display(){
+            //     console.log("hello")
+            // }
+
+
+            // function showgoogle(event){
+            //     event.preventDefault();
+            //     console.log("google link opening")
+            // }
+           
+
+           
+           
+        </script>
+    </body>
+</html>

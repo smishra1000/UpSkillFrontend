@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>new demo</title>
+</head>
+
+<body>
+    <script>
+
+        function Employee(name, age) {
+            this.name = name
+            this.age = age
+        }
+
+        // let e1 = new Employee("test1",30)
+        // console.log(e1)
+        // let e2 = new Employee("test2",50)
+        // console.log(e2)
+
+        // let e3 = new Employee("test3",70)
+
+        // console.log(e3)
+        // console.log(e1===e2)
+
+
+        let Task = function (action) {
+            this.action = action;
+            return {
+                done: false
+            };
+        }
+        let task = new Task("create");
+        console.log(task.action);
+
+    </script>
+</body>
+
+</html>
