@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>es6 demo2</title>
+    </head>
+    <body>
+        <script>
+            // let user = {
+            //     name:"sameer",
+            //     age:20
+            // }
+            // for(let key in user){
+            //     console.log(typeof key)
+            // }
+
+            // let obj = {name:"sameer"}
+
+            // let userMap = new Map()
+            // userMap.set(obj,"hello")
+            // userMap.set(true,"yes")
+
+            // console.log(userMap)
+            // console.log(userMap.get(obj))
+
+
+            // let a1 = [20,30,40,20]
+
+            // console.log(a1)
+
+            // let a2 = new Set([20,30,20,30,40])
+
+            // console.log(a2)
+
+            // let userSet = new Set()
+
+            // let user1 = {name:"sameer"}
+            // let user2 = {name:"sameer"}
+
+            // userSet.add(user1)
+            // userSet.add(user2)
+            // userSet.add(user1)
+
+            // for(let u of userSet){
+            //     console.log(u.name)
+            // }
+
+            // weakMap
+
+            // let wm = new WeakMap();
+
+            // let user = {name:"sameer"}
+
+            // wm.set(user,{age:20})
+
+            // console.log(wm)
+            // console.log(wm.get(user))
+
+            // let ws = new WeakSet()
+            // let user = {name:"sameer"}
+            // ws.add(user,20)
+
+            // console.log(ws)
+
+            // let user = {
+            //     name:"sameer"
+            // }
+
+            // user.id="101"
+
+            // console.log(user)
+
+            // user.id="helloo chnaged"
+            // console.log(user)
+
+            // let u1 = Symbol("hiii")
+
+            // let u2 = Symbol("hiii")
+
+            // console.log(u1===u2)
+
+            // let id = Symbol("101")
+
+            // let user = {
+            //     name:"sameer",
+            //     [id]:"101"
+            // }
+
+            // let id2 = Symbol()
+
+            // user[id2] = "hello"
+
+            // console.log(user)
+
+            // console.log(user[id2])
+
+
+
+
+
+           
+            function say(){
+                console.log("hiii")
+                return
+                console.log("hiii2")
+            }
+
+            say();
+            say();
+
+
+             // generators 
+
+            // function* saygen(){
+            //     console.log("hiii")
+            //     yield
+            //     console.log("hiiii2")
+            //     yield
+            // }
+
+            // let say1= saygen();
+
+            // console.log(say1.next())
+            // console.log(say1.next())
+            // console.log(say1.next())
+
+            //find ,findIndex,includes
+
+            let userArray = [
+                {
+                    name:"sameer",
+                    id:2
+                },
+                {
+                    name:"test1",
+                    id:3
+                },
+                {
+                    name:"test3",
+                    id:4
+                }
+            ]
+
+            let user = userArray.find(function(user){
+                return user.id===2
+            })
+
+            console.log(user)
+            
+        </script>
+    </body>
+</html>

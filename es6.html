@@ -150,40 +150,33 @@
 
         // using promise ------
 
-        let balance = 5000
+        // let balance = 5000
 
-        function orderItem(itemprice){
-            return new Promise(function(resolve,reject){
-                setTimeout(function(){
-                    if(itemprice>balance){
-                        reject("insufficient balance")
-                    }else{
-                    console.log("placing an order")
-                    resolve("order placed successfully")
-                    }
+        // function orderItem(itemprice){
+        //     return new Promise(function(resolve,reject){
+        //         setTimeout(function(){
+        //             if(itemprice>balance){
+        //                 reject("insufficient balance")
+        //             }else{
+        //             console.log("placing an order")
+        //             resolve("order placed successfully")
+        //             }
                    
-                },3000)
-            })
+        //         },3000)
+        //     })
 
-        }
+        // }
 
-        function payNow(){
-            console.log("payment done")
-        }
+        // function payNow(){
+        //     console.log("payment done")
+        // }
 
-        orderItem(7000).then(function(res){
-            console.log(res)
-            payNow();
-        }).catch(function(err){
-            console.log("some went wrong",err)
-        })
-
-        
-
-
-
-
-
+        // orderItem(7000).then(function(res){
+        //     console.log(res)
+        //     payNow();
+        // }).catch(function(err){
+        //     console.log("some went wrong",err)
+        // })
 
         </script>
     </body>
